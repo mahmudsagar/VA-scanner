@@ -1,0 +1,94 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+/**
+Header Section Style
+Contains NavBar and Hero Secton
+*/
+
+#header {
+}
+
+/* Logo fixed height and width */
+.navbar-brand img {
+    width: 10.375rem;
+    height: 4.75rem;
+}
+.nav-link,
+.auth-btn, .toggler-btn {
+    font-size: 0.875rem !important;
+    color: hsl(0, 0%, 0%) !important;
+    position: relative;
+}
+/* Nav links Bottom Border stylea */
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 0;
+    visibility: hidden;
+    height: 2px;
+    bottom: 0;
+    background: hsl(0, 0%, 0%);
+    position: absolute;
+    transition: all ease-in-out 0.5s;
+}
+
+.nav-link::after {
+    top: 2.5625rem;
+    left: 0.5rem;
+    transition-delay: 0.2s;
+}
+/* Links hover effects */
+.nav-link:hover::before {
+    visibility: visible;
+    width: 80%;
+}
+
+.nav-link:hover::after {
+    visibility: visible;
+    width: 50%;
+}
+
+/* Hamburger Menus Style */
+.toggler-btn i {
+    font-size: 3rem;
+}
+.toggler-btn:focus {
+    box-shadow: none !important;
+}
+
+/* Sign in/ Sign up button style */
+.navbar-btns .auth-btn {
+    border: 1px solid hsl(0, 0%, 0%);
+    transition: transform ease-in 200ms;
+}
+.navbar-btns .auth-btn:hover {
+    transform: scale(1.1);
+}
+/* media query for navbar */
+@media (min-width: 991px) {
+    .nav-link {
+        margin-right: 4.65rem;
+    }
+    .main-menu {
+        flex-direction: row-reverse !important;
+    }
+}
+
+@media (max-width: 990px) {
+    .nav-link:hover::before {
+        visibility: visible;
+        width: 3rem;
+    }
+
+    .nav-link::after {
+        left: 0;
+    }
+
+    .nav-link:hover::after {
+        visibility: visible;
+        width: 2rem;
+        left: 0;
+    }
+}
