@@ -51,6 +51,10 @@ Contains NavBar and Hero Secton
 }
 
 /* Hamburger Menus Style */
+.toggler-btn{
+    border: none !important;
+    background: transparent !important;
+}
 .toggler-btn i {
     font-size: 3rem;
 }
@@ -90,5 +94,30 @@ Contains NavBar and Hero Secton
         visibility: visible;
         width: 2rem;
         left: 0;
+    }
+}
+/* hero section */
+.hero{
+    background: url("../Images/header.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 14.375rem 6.3125rem 4.6875rem;
+    text-align: center;
+}
+.hero-form .form-control{
+    border-radius: 0;
+    width: 65ch;
+    margin: 0 auto;
+}
+.hero-form .form-control:focus{
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .hero{
+        text-align: left;
+    }
+    .hero-form .form-control{
+        width: 100%;
     }
 }
