@@ -1,6 +1,32 @@
 body {
     font-family: "Open Sans", sans-serif;
 }
+.btn-primary{
+    background-color: hsl(219, 58%, 22%) !important;
+}
+.btn-success {
+    background-color: hsl(101, 61%, 46%) !important;
+}
+/* section header style */
+.section-header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+}
+.section-border-top {
+    width: 6.8125rem;
+    display: block;
+    border-top: 4px solid #182f59;
+    margin: 0 auto 1.2rem;
+}
+
+@media(max-width: 426px){
+    .section-header::before{
+        bottom: 5rem;
+    }
+}
 
 /**
 Header Section Style
@@ -16,7 +42,8 @@ Contains NavBar and Hero Secton
     height: 4.75rem;
 }
 .nav-link,
-.auth-btn, .toggler-btn {
+.auth-btn,
+.toggler-btn {
     font-size: 0.875rem !important;
     color: hsl(0, 0%, 0%) !important;
     position: relative;
@@ -51,7 +78,7 @@ Contains NavBar and Hero Secton
 }
 
 /* Hamburger Menus Style */
-.toggler-btn{
+.toggler-btn {
     border: none !important;
     background: transparent !important;
 }
@@ -73,7 +100,7 @@ Contains NavBar and Hero Secton
 /* media query for navbar */
 @media (min-width: 991px) {
     .nav-link {
-        margin-right: 4.65rem;
+        margin-right: 3.65rem;
     }
     .main-menu {
         flex-direction: row-reverse !important;
@@ -96,28 +123,99 @@ Contains NavBar and Hero Secton
         left: 0;
     }
 }
+@media (max-width: 376px) {
+    .navbar-brand img {
+        width: 6.375rem;
+        height: auto;
+    }
+    .toggler-btn i {
+        font-size: 2rem;
+    }
+    .navbar-btns .auth-btn {
+        font-size: .8rem;
+        padding: .5rem;
+    }
+}
 /* hero section */
-.hero{
+.hero {
     background: url("../Images/header.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     padding: 14.375rem 6.3125rem 4.6875rem;
     text-align: center;
 }
-.hero-form .form-control{
+.hero-form .form-control {
     border-radius: 0;
     width: 65ch;
     margin: 0 auto;
 }
-.hero-form .form-control:focus{
+
+.hero-form .btn {
+    padding: 4px 2rem;
+}
+.hero-form .form-control:focus {
     box-shadow: none;
 }
 
 @media (max-width: 768px) {
-    .hero{
+    .hero {
         text-align: left;
     }
-    .hero-form .form-control{
+    .hero-form .form-control {
         width: 100%;
     }
 }
+
+/* Highlight Clients  */
+.clients {
+    background-color: hsl(240, 60%, 98%);
+}
+.client-items {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+}
+
+@media (min-width:1439px){
+    .client-items img {
+        margin: 0 0.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .client-items {
+        padding: .5rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.8rem;
+        justify-items: center;
+    }
+    .grid-1, .grid-2{
+        display: grid;
+        justify-items: center;
+    }
+    .client-items img {
+        margin: 0.8rem 0;
+    }
+}
+@media (max-width: 426px) {
+    .client-items img {
+        width: 130px;
+    }
+}
+/* Sample Report */
+
+.sample-report img{
+    width: 100%;
+}
+
+.sample-report h6{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.sample-report li{
+    font-size: 1.2rem;
+}
+.sample-report li::marker{
+    color: hsl(219, 58%, 22%);
+    font-size: 1.5rem;
+}
+
