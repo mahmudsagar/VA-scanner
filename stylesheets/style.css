@@ -33,8 +33,7 @@ Contains NavBar and Hero Secton
 
 /* Logo fixed height and width */
 .navbar-brand img {
-    width: 10.375rem;
-    height: 4.75rem;
+    width: 8.375rem;
 }
 .nav-link,
 .auth-btn,
@@ -364,4 +363,16 @@ Contains NavBar and Hero Secton
     #testimonial .owl-nav{
         bottom: 2.5rem;
     }
+}
+
+/* price list */
+.price-header {
+    list-style: none;
+    margin-top: 5rem;
+}
+.price-header li{
+    padding: 1rem 0;
+}
+.price-header li:not(:last-child){
+    border-bottom: 1px solid hsl(0, 0%, 0%);
 }
