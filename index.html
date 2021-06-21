@@ -1,226 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>VA Scanner</title>
-        <!-- custom css -->
-        <link rel="stylesheet" href="stylesheets/style.css" />
-        <!-- Bootstrap css -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-            crossorigin="anonymous"
-        />
-        <!-- Bootstrap icon -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-        />
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
 
-    <body>
-        <!-- Header Section -->
-        <header id="header">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Navbar Branding and Logo -->
-                    <a class="navbar-brand" href="#">
-                        <img
-                            src="Images/TechForingLogo.png"
-                            alt="TechForingLogo"
-                        />
-                    </a>
-                    <div class="navbar-btns order-lg-2">
-                        <button class="btn auth-btn">Sign In/Sign Up</button>
-                        <!-- Hamburger Icon -->
-                        <button
-                            class="btn navbar-toggler toggler-btn"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarText"
-                            aria-controls="navbarText"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <i class="bi bi-list"></i>
-                        </button>
-                    </div>
-                    <!-- NavLinks -->
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">More</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Services</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav main-menu mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Resources</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                        </ul>
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VA Scanner</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="stylesheets/owl.theme.default.min.css">
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Navbar Branding and Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="Images/TechForingLogo.png" alt="TechForingLogo" />
+                </a>
+                <div class="navbar-btns order-lg-2">
+                    <button class="btn auth-btn">Sign In/Sign Up</button>
+                    <!-- Hamburger Icon -->
+                    <button class="btn navbar-toggler toggler-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
                 </div>
-            </nav>
-            <section class="hero container-fluid mx-auto">
-                <div class="container text-white">
-                    <article class="hero-text">
-                        <h3 class="text-uppercase">
-                            techforing Vulnerability Scanner
-                        </h3>
-                        <p>
-                            THIRDEYE is an online vulnerability scanner that
-                            finds cyber security weaknesses in your digital
-                            infrastructure before the hackers do. Discover
-                            common web application vulnerabilities and server
-                            configuration issues.
-                        </p>
-                    </article>
-                    <div class="hero-form">
-                        <form action="">
-                            <input
-                                class="form-control my-3"
-                                id="scan"
-                                type="text"
-                                placeholder="https://www.example.com/"
-                            />
-                            <input
-                                class="form-control my-3"
-                                id="email"
-                                type="email"
-                                placeholder="your email address"
-                            />
-                            <button class="btn btn-success text-uppercase">
-                                free scan
-                            </button>
-                        </form>
-                    </div>
+                <!-- NavLinks -->
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">More</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav main-menu mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </header>
-        <!-- Highlight Clients -->
-        <section id="clients" class="my-2">
-            <div class="section-header">
-                <span class="section-border-top"></span>
-                <h2>Trusted by it & telecom Company</h2>
             </div>
-            <div class="clients py-3">
-                <div class="container">
-                    <div class="client-items">
-                        <div class="grid-1">
-                            <img
-                                src="./Images/webtrix-logo.png"
-                                alt="webtrix-logo"
-                            />
-                            <img
-                                src="./Images/gurus-logo.png"
-                                alt="gurus-logo"
-                            />
-                            <img src="./Images/DCI-logo.png" alt="DCI-logo" />
-                            <img
-                                src="./Images/active-adult-logo.png"
-                                alt="active-adult-logo"
-                            />
-                        </div>
-                        <div class="grid-2">
-                            <img
-                                src="./Images/ntuc-social-enterprise-logo.png"
-                                alt="ntuc-social-enterprise-logo"
-                            />
-                            <img
-                                src="./Images/dev-factory-logo.png"
-                                alt="dev-factory-logo"
-                            />
-                            <img src="./Images/sark-logo.png" alt="sark-logo" />
-                        </div>
-                    </div>
+        </nav>
+        <section class="hero container-fluid mx-auto">
+            <div class="container text-white">
+                <article class="hero-text">
+                    <h3 class="text-uppercase">
+                        techforing Vulnerability Scanner
+                    </h3>
+                    <p>
+                        THIRDEYE is an online vulnerability scanner that
+                        finds cyber security weaknesses in your digital
+                        infrastructure before the hackers do. Discover
+                        common web application vulnerabilities and server
+                        configuration issues.
+                    </p>
+                </article>
+                <div class="hero-form">
+                    <form action="">
+                        <input class="form-control my-3" id="scan" type="text" placeholder="https://www.example.com/" />
+                        <input class="form-control my-3" id="email" type="email" placeholder="your email address" />
+                        <button class="btn btn-success text-uppercase">
+                            free scan
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
-        <article id="about">
-            <div class="section-header">
-                <span class="section-border-top"></span>
-                <h2>Want a full scan?</h2>
-            </div>
+    </header>
+    <!-- Highlight Clients -->
+    <section id="clients" class="my-2">
+        <div class="section-header">
+            <span class="section-border-top"></span>
+            <h2>Trusted by it & telecom Company</h2>
+        </div>
+        <div class="clients py-3">
             <div class="container">
-                <div class="text-center">
-                    <p>
-                        Website Vulnerability Free scan performs a passive web
-                        security scan in order to detect issues like: outdated
-                        server software, insecure HTTP headers, insecure cookie
-                        settings and a few others. We recommend doing a Full
-                        Scan for a comprehensive website assessment which
-                        includes detection of SQL Injection, XSS, Local File
-                        Inclusion, OS Command Injection and more.
-                    </p>
-                    <button class="btn about-btn btn-primary text-uppercase">
-                        free scan
-                    </button>
+                <div class="client-items">
+                    <div class="grid-1">
+                        <img src="./Images/webtrix-logo.png" alt="webtrix-logo" />
+                        <img src="./Images/gurus-logo.png" alt="gurus-logo" />
+                        <img src="./Images/DCI-logo.png" alt="DCI-logo" />
+                        <img src="./Images/active-adult-logo.png" alt="active-adult-logo" />
+                    </div>
+                    <div class="grid-2">
+                        <img src="./Images/ntuc-social-enterprise-logo.png" alt="ntuc-social-enterprise-logo" />
+                        <img src="./Images/dev-factory-logo.png" alt="dev-factory-logo" />
+                        <img src="./Images/sark-logo.png" alt="sark-logo" />
+                    </div>
                 </div>
             </div>
-            <div class="sample-report">
-                <div class="container my-5 pb-4">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <h3 class="mb-4">Sample Report</h3>
-                            <h6 class="mb-3">
-                                Here is a Website Vulnerability Scanner sample
-                                report:
-                            </h6>
-                            <ul>
-                                <li class="py-3">
-                                    The report starts with a quick summary of
-                                    the findings and risk ratings
-                                </li >
-                                <li class="py-3">
-                                    Each finding has a detailed explanation in
-                                    terms of risk and recommendations
-                                </li>
-                                <li class="py-3 ">
-                                    The vulnerabilities are ordered by the risk
-                                    level
-                                </li>
-                            </ul>
+        </div>
+    </section>
+    <article id="about">
+        <div class="section-header">
+            <span class="section-border-top"></span>
+            <h2>Want a full scan?</h2>
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <p>
+                    Website Vulnerability Free scan performs a passive web
+                    security scan in order to detect issues like: outdated
+                    server software, insecure HTTP headers, insecure cookie
+                    settings and a few others. We recommend doing a Full
+                    Scan for a comprehensive website assessment which
+                    includes detection of SQL Injection, XSS, Local File
+                    Inclusion, OS Command Injection and more.
+                </p>
+                <button class="btn about-btn btn-primary text-uppercase">
+                    free scan
+                </button>
+            </div>
+        </div>
+        <div class="sample-report">
+            <div class="container my-5 pb-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="mb-4">Sample Report</h3>
+                        <h6 class="mb-3">
+                            Here is a Website Vulnerability Scanner sample
+                            report:
+                        </h6>
+                        <ul>
+                            <li class="py-3">
+                                The report starts with a quick summary of
+                                the findings and risk ratings
+                            </li>
+                            <li class="py-3">
+                                Each finding has a detailed explanation in
+                                terms of risk and recommendations
+                            </li>
+                            <li class="py-3">
+                                The vulnerabilities are ordered by the risk
+                                level
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./Images/4.png" alt="report" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="seevices" class="mb-3">
+        <div class="section-header">
+            <span class="section-border-top"></span>
+            <h2>Want a full scan?</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px">
+                        <div class="card-grid">
+                            <img src="./icons/clipboard.png" class="card-icon" alt="clipboard" />
+                            <div class="card-body">
+                                <span class="card-title-border"></span>
+                                <h5 class="card-title">
+                                    Self-Security Assessment
+                                </h5>
+                                <p class="card-text">
+                                    You can perform a self-security
+                                    assessment in order to detect weaknesses
+                                    in your own application. This will allow
+                                    you to fix the vulnerabilities before
+                                    being hit by real attackers.
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <img src="./Images/4.png" alt="report" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px">
+                        <div class="card-grid">
+                            <img src="./icons/Vector-Smart-Object1.png" class="card-icon" alt="management" />
+                            <div class="card-body">
+                                <span class="card-title-border"></span>
+                                <h5 class="card-title">
+                                    Ongoing Vulnerability Management
+                                </h5>
+                                <p class="card-text">
+                                    Schedule scans for weekly or monthly
+                                    reports. Configure report to alert on
+                                    changes to vulnerability count.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px">
+                        <div class="card-grid">
+                            <img src="./icons/Vector-Smart-Object.png" class="card-icon" alt="eye" />
+                            <div class="card-body">
+                                <span class="card-title-border"></span>
+                                <h5 class="card-title">
+                                    Comprehensive Vulnerability Discovery
+                                </h5>
+                                <p class="card-text">
+                                    Detect a wide range of network service
+                                    and web application vulnerabilities
+                                    across any Internet facing system.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="card mb-3" style="max-width: 540px">
+                        <div class="card-grid">
+                            <img src="./icons/real-time.png" class="card-icon" alt="real-time" />
+                            <div class="card-body">
+                                <span class="card-title-border"></span>
+                                <h5 class="card-title">
+                                    Real Time Risk Visibility
+                                </h5>
+                                <p class="card-text">
+                                    Detailed reports that include
+                                    vulnerability severity with technical
+                                    details of immediate value to the user.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </article>
-        <article></article>
-        <section></section>
-        <section></section>
-        <article></article>
-        <section></section>
-        <section></section>
-        <section></section>
-        <footer></footer>
+        </div>
+    </article>
+    <section id="stat">
+        <div class="container">
+            <div class="statinfo">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-body d-flex flex-column text-blue align-items-md-start justify-content-center">
+                            <div class="card-grid">
+                                <img src="./icons/check-mark.png" class="w-100 mt-3" alt="check-mark" />
+                                <div class="card-title">
+                                    <h3 class="display-5 fw-bold">
+                                        100<smal class="fs-2 fw-bold">%</smal>
+                                    </h3>
+                                    <p class="text-dark">Guaranteed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-body d-flex flex-column text-blue align-items-md-start justify-content-center">
+                            <div class="card-grid">
+                                <img src="./icons/customer.png" class="w-100 mt-3" alt="customer" />
+                                <div class="card-title">
+                                    <h3 class="display-5 fw-bold">
+                                        700<smal class="fs-2 fw-bold">k+</smal>
+                                    </h3>
+                                    <p class="text-dark">Satisfied Client</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-body d-flex flex-column text-blue align-items-md-start justify-content-center">
+                            <div class="card-grid">
+                                <img src="./icons/zoom.png" class="w-100 mt-3" alt="zoom" />
+                                <div class="card-title">
+                                    <h3 class="display-5 fw-bold">
+                                        500<smal class="fs-2 fw-bold"></smal>
+                                    </h3>
+                                    <p class="text-dark">Sites scanned daily</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-body d-flex flex-column text-blue align-items-md-start justify-content-center">
+                            <div class="card-grid">
+                                <img src="./icons/report (1).png" class="w-100 mt-3" alt="report" />
+                                <div class="card-title">
+                                    <h3 class="display-5 fw-bold">
+                                        100<smal class="fs-2 fw-bold">%</smal>
+                                    </h3>
+                                    <p class="text-dark">Authenticate report generate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="py-5">
 
-        <!-- custom script -->
-        <script src="javsacripts/script.js"></script>
-        <!-- Bootstrap script -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <div class="feature-body">
+                        <div class="feature-header">
+                            <span class="feature-border-top"></span>
+                            <h2>Features of Thirdeye</h2>
+                            <p>Facilities you will get using this scanner </p>
+                        </div>
+                        <div class="feature-content mb-5">
+                            <div class="container">
+                                <div class="row gy-3 mt-0">
+                                    <div class="col-md-6">
+                                        <div class="card" style="width: 100%;">
+                                            <img src="./icons/scan.png" class="card-img-top" alt="scan">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Automate your scan</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card" style="width: 100%;">
+                                            <img src="./icons/Vector-Smart-Object2.png" class="card-img-top" alt="scan">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Invite your other organization users</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gy-3 mt-0">
+                                    <div class="col-md-6">
+                                        <div class="card" style="width: 100%;">
+                                            <img src="./icons/team.png" class="card-img-top" alt="scan">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Work together with programmer and Developer</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card" style="width: 100%;">
+                                            <img src="./icons/report (1)1.png" class="card-img-top" alt="scan">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Generate automated report</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gy-3 justify-content-center mt-0">
+                                    <div class="col-md-6">
+                                        <div class="card" style="width: 100%;">
+                                            <img src="./icons/vulnerability.png" class="card-img-top" alt="scan">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Find the most common vulnerabilities</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="./Images/mockup-desktop.png" alt="mockup-desktop" class="w-100 mt-5 pt-4 ms-5">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonial">
+        <div class="section-header">
+            <span class="section-border-top"></span>
+            <h2>what our customers say</h2>
+        </div>
+        <div class="container">
+            <div id="owl-carousel" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <img src="./icons/left-quotes-sign.png" class="left-qoute" alt="left-qoute">
+                            </span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s,
+                        </div>
+                    </div>
+                    <div class="customer text-center">
+                        <img src="./Images/Layer 1.png" alt="img1" class="avatar">
+                        <h5>Al James, CTO</h5>
+                        <p>Ometria</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <img src="./icons/left-quotes-sign.png" class="left-qoute" alt="left-qoute">
+                            </span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s,
+                        </div>
+                    </div>
+                    <div class="customer text-center">
+                        <img src="./Images/layer2.png" alt="img1" class="avatar">
+                        <h5>Al James, CTO</h5>
+                        <p>Ometria</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <img src="./icons/left-quotes-sign.png" class="left-qoute" alt="left-qoute">
+                            </span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s,
+                        </div>
+                    </div>
+                    <div class="customer text-center">
+                        <img src="./Images/Layer 1.png" alt="img1" class="avatar">
+                        <h5>Al James, CTO</h5>
+                        <p>Ometria</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <img src="./icons/left-quotes-sign.png" class="left-qoute" alt="left-qoute">
+                            </span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s,
+                        </div>
+                    </div>
+                    <div class="customer text-center">
+                        <img src="./Images/layer2.png" alt="img1" class="avatar">
+                        <h5>Al James, CTO</h5>
+                        <p>Ometria</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <img src="./icons/left-quotes-sign.png" class="left-qoute" alt="left-qoute">
+                            </span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s,
+                        </div>
+                    </div>
+                    <div class="customer text-center">
+                        <img src="./Images/Layer 1.png" alt="img1" class="avatar">
+                        <h5>Al James, CTO</h5>
+                        <p>Ometria</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card">
+                        <div class="card-body">
+                            <span>
+                                <img src="./icons/left-quotes-sign.png" class="left-qoute" alt="left-qoute">
+                            </span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s,
+                        </div>
+                    </div>
+                    <div class="customer text-center">
+                        <img src="./Images/layer2.png" alt="img1" class="avatar">
+                        <h5>Al James, CTO</h5>
+                        <p>Ometria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="price-list">
+        <div class="section-header">
+            <span class="section-border-top"></span>
+            <h2>pricing</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </section>
+    <section></section>
+    <section></section>
+    <footer></footer>
+
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Owl carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+        integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- custom script -->
+    <script src="javsacripts/script.js"></script>
+</body>
+
 </html>
